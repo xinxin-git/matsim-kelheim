@@ -1,4 +1,4 @@
-package org.matsim.run.prepare;
+package org.matsim.run.prepare.myPrepare;
 
 import org.matsim.api.core.v01.Id;
 import org.matsim.api.core.v01.network.Network;
