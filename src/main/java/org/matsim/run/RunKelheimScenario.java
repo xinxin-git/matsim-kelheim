@@ -48,6 +48,7 @@ import org.matsim.core.config.groups.PlansCalcRouteConfigGroup;
 import org.matsim.core.config.groups.VspExperimentalConfigGroup;
 import org.matsim.core.controler.AbstractModule;
 import org.matsim.core.controler.Controler;
+import org.matsim.core.controler.OutputDirectoryHierarchy;
 import org.matsim.core.replanning.strategies.DefaultPlanStrategiesModule;
 import org.matsim.core.router.AnalysisMainModeIdentifier;
 import org.matsim.core.scoring.functions.ScoringParametersForPerson;
@@ -119,7 +120,7 @@ public class RunKelheimScenario extends MATSimApplication {
     @Nullable
     @Override
     protected Config prepareConfig(Config config) {
-
+        config.controler().setOverwriteFileSetting(OutputDirectoryHierarchy.OverwriteFileSetting.overwriteExistingFiles);
         for (long ii = 600; ii <= 97200; ii += 600) {
 
             for (String act : List.of("home", "restaurant", "other", "visit", "errands", "accomp_other", "accomp_children",
