@@ -19,7 +19,8 @@ public class RoadEventHandler implements LinkEnterEventHandler {
     @Override
     public void handleEvent(LinkEnterEvent linkEnterEvent) {
         if (blockedLinkCount.containsKey(linkEnterEvent.getLinkId().toString())) {
-            blockedLinkCount.replace(linkEnterEvent.getLinkId().toString(), blockedLinkCount.get(linkEnterEvent.getLinkId().toString()) + 1);
+            blockedLinkCount.replace(linkEnterEvent.getLinkId().toString(),
+                    blockedLinkCount.get(linkEnterEvent.getLinkId().toString()) + 1);
         }
     }
 }
